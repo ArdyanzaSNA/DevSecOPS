@@ -21,8 +21,8 @@
         "cells": [
           {
             "position": {
-              "x": -1839.5,
-              "y": -1230
+              "x": -1850,
+              "y": -1220
             },
             "size": {
               "width": 530,
@@ -51,10 +51,16 @@
                 "9053d2ac-da98-4853-ab48-5d5d3d34c315",
                 "c957dcf6-28a0-4c8e-82bd-b3d2fdcbdcd3",
                 "5371cd34-64de-4da6-9663-57adf4d1bd34",
-                "a127263a-78bf-497a-8f91-8c83204a7a63",
                 "d9bb91a9-0215-44d9-bea2-56f3bf320ab4",
                 "3cdc723b-6fe8-48ec-929d-fc3786c217c1"
               ]
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -798,138 +804,7 @@
               "privilegeLevel": "",
               "threats": []
             },
-            "zIndex": 12,
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
-            }
-          },
-          {
-            "position": {
-              "x": -1454,
-              "y": -1195
-            },
-            "size": {
-              "width": 120,
-              "height": 60
-            },
-            "attrs": {
-              "text": {
-                "text": "D.1 MySQL DB"
-              },
-              "topLine": {
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
-              },
-              "bottomLine": {
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
-              }
-            },
-            "visible": true,
-            "shape": "store",
-            "ports": {
-              "groups": {
-                "top": {
-                  "position": "top",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "position": "right",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "bottom": {
-                  "position": "bottom",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "left": {
-                  "position": "left",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                }
-              },
-              "items": [
-                {
-                  "group": "top",
-                  "id": "805195ba-a3ad-407f-8cfb-d5cd403fcd44"
-                },
-                {
-                  "group": "right",
-                  "id": "5c3be71b-95a1-4548-95f1-00dd994e7db6"
-                },
-                {
-                  "group": "bottom",
-                  "id": "b71e612f-3134-456a-ba72-568fb10e768b"
-                },
-                {
-                  "group": "left",
-                  "id": "8642c188-cb9e-4b10-aee9-86c6f7c25885"
-                }
-              ]
-            },
-            "id": "a127263a-78bf-497a-8f91-8c83204a7a63",
-            "zIndex": 13,
-            "data": {
-              "type": "tm.Store",
-              "name": "D.1 MySQL DB",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isALog": false,
-              "isEncrypted": false,
-              "isSigned": false,
-              "storesCredentials": false,
-              "storesInventory": false,
-              "threats": []
-            }
+            "zIndex": 12
           },
           {
             "position": {
@@ -1399,7 +1274,7 @@
           },
           {
             "position": {
-              "x": -1620,
+              "x": -1629.5,
               "y": -1170
             },
             "size": {
@@ -1408,7 +1283,7 @@
             },
             "attrs": {
               "text": {
-                "text": "1.0\nFrontend\n(React)"
+                "text": "2.0\nAPI\n(Node.js)"
               },
               "body": {
                 "stroke": "#333333",
@@ -1503,7 +1378,7 @@
             "id": "3cdc723b-6fe8-48ec-929d-fc3786c217c1",
             "data": {
               "type": "tm.Process",
-              "name": "1.0\nFrontend\n(React)",
+              "name": "2.0\nAPI\n(Node.js)",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
