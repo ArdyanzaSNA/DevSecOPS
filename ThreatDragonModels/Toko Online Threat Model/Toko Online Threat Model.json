@@ -44,7 +44,8 @@
               "isTrustBoundary": true,
               "hasOpenThreats": false,
               "crossingFlows": [
-                "2a487e6f-205c-4596-b4ff-dbc12af0c82a"
+                "2a487e6f-205c-4596-b4ff-dbc12af0c82a",
+                "b76a0d25-6a28-40f9-8b3b-16bdc84f7bdc"
               ],
               "containedElements": [
                 "9053d2ac-da98-4853-ab48-5d5d3d34c315",
@@ -499,6 +500,64 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Kelola Produk",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "91ae1a6c-5b2b-4e14-bd00-ebe51196f5f2"
+              ]
+            },
+            "labels": [
+              "Kelola Produk"
+            ],
+            "id": "b76a0d25-6a28-40f9-8b3b-16bdc84f7bdc",
+            "source": {
+              "cell": "a3246fcc-e235-4956-a70f-65b76778e315",
+              "port": "d98a727c-caa0-41b6-a18b-27eb0a706c6a"
+            },
+            "target": {
+              "cell": "3cdc723b-6fe8-48ec-929d-fc3786c217c1",
+              "port": "73647116-5044-47e8-9600-f69697f2996c"
+            },
+            "vertices": [
+              {
+                "x": -1880,
+                "y": -950
+              },
+              {
+                "x": -1770,
+                "y": -1040
+              }
+            ]
+          },
+          {
             "position": {
               "x": -1780,
               "y": -1020
@@ -739,7 +798,14 @@
               "privilegeLevel": "",
               "threats": []
             },
-            "zIndex": 12
+            "zIndex": 12,
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
+            }
           },
           {
             "position": {
