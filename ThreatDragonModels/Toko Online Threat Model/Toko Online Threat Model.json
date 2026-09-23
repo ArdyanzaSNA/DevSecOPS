@@ -35,8 +35,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "91ae1a6c-5b2b-4e14-bd00-ebe51196f5f2",
             "zIndex": -1,
+            "id": "91ae1a6c-5b2b-4e14-bd00-ebe51196f5f2",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "System Toko Online",
@@ -45,9 +45,9 @@
               "hasOpenThreats": false,
               "crossingFlows": [
                 "2c2e92e5-afd2-4912-a759-a522defff503",
+                "ee0e372f-1e1a-4181-bfc9-77f206d8b6ac",
                 "14d86e7c-9c64-41f6-a59b-f32710e854ff",
-                "6209dd3b-16b0-473b-8d11-266ad427b1a7",
-                "ee0e372f-1e1a-4181-bfc9-77f206d8b6ac"
+                "6209dd3b-16b0-473b-8d11-266ad427b1a7"
               ],
               "containedElements": [
                 "40d6bd4c-5d2d-4b65-81d0-c09cee24c057",
@@ -76,8 +76,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "6af15fb9-7496-40a6-a105-99cf5ecaadc1",
             "zIndex": -1,
+            "id": "6af15fb9-7496-40a6-a105-99cf5ecaadc1",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Payment Gateaway (Eksternal)",
@@ -104,8 +104,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "40d6bd4c-5d2d-4b65-81d0-c09cee24c057",
             "zIndex": -1,
+            "id": "40d6bd4c-5d2d-4b65-81d0-c09cee24c057",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "",
@@ -141,6 +141,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -224,7 +225,6 @@
               ]
             },
             "id": "15d3340c-adfe-4443-8291-fc82c4076b3f",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "Customer\n(Pengguna)",
@@ -258,6 +258,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -351,8 +352,7 @@
               "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": []
-            },
-            "zIndex": 5
+            }
           },
           {
             "position": {
@@ -375,6 +375,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 9,
             "ports": {
               "groups": {
                 "top": {
@@ -471,8 +472,7 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
-            },
-            "zIndex": 9
+            }
           },
           {
             "shape": "flow",
@@ -615,233 +615,6 @@
             "target": {
               "cell": "9838f7f1-bbf5-44e7-8449-66d559e390ec",
               "port": "918b5003-421b-4a14-9161-4e710f7bcb12"
-            },
-            "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Registrasi / Login",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "3f478086-8100-41a6-8eb9-08f1b44e3dc9",
-                  "title": "Spoofing",
-                  "status": "Open",
-                  "severity": "High",
-                  "type": "",
-                  "description": "Penyerang menggunakan kredensial curian untuk menyamar sebagai customer",
-                  "mitigation": "Sistem harus memverifikasi identitas pengguna saat login dengan autentikasi yang kuat serta membatasi percobaan login yang gagal.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 3,
-                  "score": "5/5"
-                }
-              ],
-              "trustBoundaryIds": [
-                "91ae1a6c-5b2b-4e14-bd00-ebe51196f5f2"
-              ],
-              "threatFrequency": {
-                "tampering": 0,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Registrasi / Login"
-            ],
-            "id": "14d86e7c-9c64-41f6-a59b-f32710e854ff",
-            "source": {
-              "cell": "15d3340c-adfe-4443-8291-fc82c4076b3f",
-              "port": "d98a727c-caa0-41b6-a18b-27eb0a706c6a"
-            },
-            "target": {
-              "cell": "9053d2ac-da98-4853-ab48-5d5d3d34c315",
-              "port": "918b5003-421b-4a14-9161-4e710f7bcb12"
-            },
-            "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Kelola Produk",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "ce1ed379-c082-4e36-8b7f-d8d456eb5cc7",
-                  "title": "Elevation of Privilege",
-                  "status": "Open",
-                  "severity": "High",
-                  "type": "",
-                  "description": "Customer memperoleh hak akses untuk melakukan fungsi admin",
-                  "mitigation": "Terapkan RBAC dan validasi role pada setiap endpoint admin",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 4,
-                  "score": "5/5"
-                }
-              ],
-              "trustBoundaryIds": [
-                "91ae1a6c-5b2b-4e14-bd00-ebe51196f5f2"
-              ],
-              "threatFrequency": {
-                "tampering": 0,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Kelola Produk"
-            ],
-            "id": "6209dd3b-16b0-473b-8d11-266ad427b1a7",
-            "source": {
-              "cell": "a3246fcc-e235-4956-a70f-65b76778e315",
-              "port": "d98a727c-caa0-41b6-a18b-27eb0a706c6a"
-            },
-            "target": {
-              "cell": "9838f7f1-bbf5-44e7-8449-66d559e390ec",
-              "port": "73647116-5044-47e8-9600-f69697f2996c"
-            },
-            "vertices": [
-              {
-                "x": -1900,
-                "y": -980
-              },
-              {
-                "x": -1760,
-                "y": -1040
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data User / Pesanan",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "f46d2049-2a11-4859-9ddb-da8de7ccdeec",
-                  "title": "Tampering",
-                  "status": "Open",
-                  "severity": "High",
-                  "type": "",
-                  "description": "Data user, harga, atau pesanan dimodifikasi tanpa izin",
-                  "mitigation": "Gunakan parameterized query/ORM dan validasi input",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 5,
-                  "score": "5/5"
-                },
-                {
-                  "id": "6229c016-bad8-4800-a3fa-f34c8e64f2d0",
-                  "title": "Information Disclosure",
-                  "status": "Open",
-                  "severity": "High",
-                  "type": "",
-                  "description": "Data pribadi dan data transaksi customer bocor",
-                  "mitigation": "Enkripsi data sensitif dan batasi akses database berdasarkan role\n",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 7,
-                  "score": "5/5"
-                }
-              ],
-              "trustBoundaryIds": [],
-              "threatFrequency": {
-                "tampering": 0,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Data User / Pesanan"
-            ],
-            "id": "c655c73f-614d-4407-9f30-056c48c8bbd6",
-            "source": {
-              "cell": "9838f7f1-bbf5-44e7-8449-66d559e390ec",
-              "port": "c3123d8f-8511-4759-b063-ce51cab6657b"
-            },
-            "target": {
-              "cell": "5b32667b-3f04-4592-9bea-4d4c981865fb",
-              "port": "8642c188-cb9e-4b10-aee9-86c6f7c25885"
             },
             "vertices": []
           },
@@ -1142,6 +915,151 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Registrasi / Login",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "3f478086-8100-41a6-8eb9-08f1b44e3dc9",
+                  "title": "Spoofing",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "",
+                  "description": "Penyerang menggunakan kredensial curian untuk menyamar sebagai customer",
+                  "mitigation": "Sistem harus memverifikasi identitas pengguna saat login dengan autentikasi yang kuat serta membatasi percobaan login yang gagal.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": "5/5"
+                }
+              ],
+              "trustBoundaryIds": [
+                "91ae1a6c-5b2b-4e14-bd00-ebe51196f5f2"
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Registrasi / Login"
+            ],
+            "id": "14d86e7c-9c64-41f6-a59b-f32710e854ff",
+            "source": {
+              "cell": "15d3340c-adfe-4443-8291-fc82c4076b3f",
+              "port": "d98a727c-caa0-41b6-a18b-27eb0a706c6a"
+            },
+            "target": {
+              "cell": "9053d2ac-da98-4853-ab48-5d5d3d34c315",
+              "port": "918b5003-421b-4a14-9161-4e710f7bcb12"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Kelola Produk",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "ce1ed379-c082-4e36-8b7f-d8d456eb5cc7",
+                  "title": "Elevation of Privilege",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "",
+                  "description": "Customer memperoleh hak akses untuk melakukan fungsi admin",
+                  "mitigation": "Sistem harus memeriksa role dan hak akses pengguna pada setiap endpoint admin sehingga customer tidak dapat menjalankan fungsi administrator.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": "5/5"
+                }
+              ],
+              "trustBoundaryIds": [
+                "91ae1a6c-5b2b-4e14-bd00-ebe51196f5f2"
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Kelola Produk"
+            ],
+            "id": "6209dd3b-16b0-473b-8d11-266ad427b1a7",
+            "source": {
+              "cell": "a3246fcc-e235-4956-a70f-65b76778e315",
+              "port": "d98a727c-caa0-41b6-a18b-27eb0a706c6a"
+            },
+            "target": {
+              "cell": "9838f7f1-bbf5-44e7-8449-66d559e390ec",
+              "port": "73647116-5044-47e8-9600-f69697f2996c"
+            },
+            "vertices": [
+              {
+                "x": -1900,
+                "y": -980
+              },
+              {
+                "x": -1760,
+                "y": -1040
+              }
+            ]
+          },
+          {
             "position": {
               "x": -1760,
               "y": -990
@@ -1162,6 +1080,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -1259,7 +1178,6 @@
               "privilegeLevel": "",
               "threats": []
             },
-            "zIndex": 11,
             "children": [
               "85afd8ab-1d7b-46e2-9918-093aaf8cd1a0"
             ]
@@ -1285,6 +1203,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 12,
             "ports": {
               "groups": {
                 "top": {
@@ -1381,8 +1300,7 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
-            },
-            "zIndex": 12
+            }
           },
           {
             "position": {
@@ -1405,6 +1323,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 16,
             "ports": {
               "groups": {
                 "top": {
@@ -1488,7 +1407,6 @@
               ]
             },
             "id": "a3246fcc-e235-4956-a70f-65b76778e315",
-            "zIndex": 16,
             "data": {
               "type": "tm.Actor",
               "name": "Admin\n(Kelola Produk)",
@@ -1522,6 +1440,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 17,
             "ports": {
               "groups": {
                 "top": {
@@ -1605,7 +1524,6 @@
               ]
             },
             "id": "5b54975d-bcbd-4278-b6a7-03e23d0563da",
-            "zIndex": 17,
             "data": {
               "type": "tm.Actor",
               "name": "Pengguna Luar\n(Attacker)",
@@ -1644,6 +1562,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 20,
             "ports": {
               "groups": {
                 "top": {
@@ -1727,7 +1646,6 @@
               ]
             },
             "id": "5b32667b-3f04-4592-9bea-4d4c981865fb",
-            "zIndex": 20,
             "data": {
               "type": "tm.Store",
               "name": "D.1 MySQL DB",
@@ -1785,6 +1703,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 21,
             "ports": {
               "groups": {
                 "top": {
@@ -1903,8 +1822,7 @@
                 "denialOfService": 1,
                 "elevationOfPrivilege": 0
               }
-            },
-            "zIndex": 21
+            }
           },
           {
             "position": {
@@ -1930,6 +1848,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 22,
             "ports": {
               "groups": {
                 "top": {
@@ -2027,8 +1946,86 @@
               "storesCredentials": false,
               "storesInventory": false,
               "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
             },
-            "zIndex": 22
+            "width": 200,
+            "height": 100,
+            "zIndex": 23,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data User / Pesanan",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "f46d2049-2a11-4859-9ddb-da8de7ccdeec",
+                  "title": "Tampering",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "",
+                  "description": "Data user, harga, atau pesanan dimodifikasi tanpa izin",
+                  "mitigation": "Sistem harus melakukan validasi input dan menggunakan parameterized query agar data tidak dapat dimanipulasi melalui request berbahaya.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": "5/5"
+                },
+                {
+                  "id": "6229c016-bad8-4800-a3fa-f34c8e64f2d0",
+                  "title": "Information Disclosure",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "",
+                  "description": "Data pribadi dan data transaksi customer bocor",
+                  "mitigation": "Sistem harus membatasi akses terhadap data sensitif dan melindungi data selama penyimpanan maupun transmisi.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": "5/5"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Data User / Pesanan"
+            ],
+            "id": "c655c73f-614d-4407-9f30-056c48c8bbd6",
+            "source": {
+              "cell": "9838f7f1-bbf5-44e7-8449-66d559e390ec",
+              "port": "c3123d8f-8511-4759-b063-ce51cab6657b"
+            },
+            "target": {
+              "cell": "5b32667b-3f04-4592-9bea-4d4c981865fb",
+              "port": "8642c188-cb9e-4b10-aee9-86c6f7c25885"
+            },
+            "vertices": []
           }
         ]
       }
