@@ -121,43 +121,6 @@
             }
           },
           {
-            "shape": "edge",
-            "attrs": {
-              "line": {
-                "targetMarker": {
-                  "name": "block",
-                  "width": 12,
-                  "height": 8
-                }
-              }
-            },
-            "id": "7b79be8b-384a-4298-9242-ab56beae001f",
-            "zIndex": 0,
-            "source": {
-              "cell": "5b54975d-bcbd-4278-b6a7-03e23d0563da",
-              "port": "2303da70-5bf0-4528-a5e9-c53664436347"
-            },
-            "target": {
-              "x": -1360,
-              "y": -770
-            },
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            }
-          },
-          {
             "position": {
               "x": -2110,
               "y": -1200
@@ -1040,6 +1003,145 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Kirim Email",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "130d0f68-5599-4dfd-bd9a-d46d931e902f",
+                  "title": "Spoofing",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "",
+                  "description": "Penyerang menyalahgunakan identitas toko untuk mengirim email palsu",
+                  "mitigation": "Gunakan SPF, DKIM, dan DMARC pada domain email",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": "5/5"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Kirim Email"
+            ],
+            "id": "4dd6d90d-f173-437e-bc77-8bcc83dfa0c5",
+            "source": {
+              "cell": "c957dcf6-28a0-4c8e-82bd-b3d2fdcbdcd3",
+              "port": "c3123d8f-8511-4759-b063-ce51cab6657b"
+            },
+            "target": {
+              "cell": "9838f7f1-bbf5-44e7-8449-66d559e390ec",
+              "port": "73647116-5044-47e8-9600-f69697f2996c"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Serangan / Akses Tidak Sah",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "dbd90e02-5c7d-4402-8a0c-f92e3745afe3",
+                  "title": "Denial of Service",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "",
+                  "description": "Penyerang mengirim request berlebihan atau aktivitas berbahaya untuk mengganggu ketersediaan sistem",
+                  "mitigation": "Sistem harus membatasi request dari sumber yang mencurigakan, menerapkan rate limiting, serta memantau pola trafik untuk mendeteksi dan memblokir aktivitas serangan.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 15,
+                  "score": "4/5"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Serangan / Akses Tidak Sah"
+            ],
+            "id": "d5f331b2-f5fe-4a2b-bc2d-47fec6ee8866",
+            "source": {
+              "cell": "5b54975d-bcbd-4278-b6a7-03e23d0563da",
+              "port": "2303da70-5bf0-4528-a5e9-c53664436347"
+            },
+            "target": {
+              "x": -1360,
+              "y": -770
+            },
+            "vertices": [
+              {
+                "x": -1340,
+                "y": -730
+              }
+            ]
+          },
+          {
             "position": {
               "x": -1760,
               "y": -990
@@ -1530,11 +1632,13 @@
                 "text": "D.1 MySQL DB"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1631,13 +1735,33 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "5febdf1f-7be2-4d92-ad86-eb529e42de74",
+                  "title": "Information Disclosure",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Informasi sensitif customer dapat diakses pihak yang tidak berwenang",
+                  "mitigation": "Terapkan access control, enkripsi, dan jangan menyimpan data sensitif di log",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": "5/5"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -1905,36 +2029,12 @@
               "threats": []
             },
             "zIndex": 22
-          },
-          {
-            "position": {
-              "x": -1296.25,
-              "y": -760
-            },
-            "size": {
-              "width": 112.5,
-              "height": 60
-            },
-            "attrs": {
-              "text": {
-                "text": "Serangan / Akses Tidak Sah"
-              }
-            },
-            "visible": true,
-            "shape": "td-text-block",
-            "id": "3752ac38-b560-455d-b24a-61efa59cd816",
-            "zIndex": 23,
-            "data": {
-              "type": "tm.Text",
-              "name": "Serangan / Akses Tidak Sah",
-              "hasOpenThreats": false
-            }
           }
         ]
       }
     ],
     "diagramTop": 1,
     "reviewer": "Ardy",
-    "threatTop": 12
+    "threatTop": 15
   }
 }
