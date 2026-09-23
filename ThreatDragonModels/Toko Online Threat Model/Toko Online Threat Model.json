@@ -45,9 +45,9 @@
               "hasOpenThreats": false,
               "crossingFlows": [
                 "2c2e92e5-afd2-4912-a759-a522defff503",
-                "ee0e372f-1e1a-4181-bfc9-77f206d8b6ac",
                 "14d86e7c-9c64-41f6-a59b-f32710e854ff",
-                "6209dd3b-16b0-473b-8d11-266ad427b1a7"
+                "6209dd3b-16b0-473b-8d11-266ad427b1a7",
+                "ee0e372f-1e1a-4181-bfc9-77f206d8b6ac"
               ],
               "containedElements": [
                 "40d6bd4c-5d2d-4b65-81d0-c09cee24c057",
@@ -622,302 +622,6 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Simpanan / Ambil Cache",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "65864b1d-b3a2-4981-a394-00a10e517901",
-                  "title": "Tampering",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "",
-                  "description": "Data cache dimanipulasi sehingga aplikasi menerima data yang salah\n",
-                  "mitigation": "Gunakan autentikasi Redis dan validasi data sebelum disimpan ke cache",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 9,
-                  "score": "5/5"
-                }
-              ],
-              "trustBoundaryIds": [
-                "40d6bd4c-5d2d-4b65-81d0-c09cee24c057"
-              ],
-              "threatFrequency": {
-                "tampering": 0,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Simpanan / Ambil Cache"
-            ],
-            "id": "770613b3-863e-4c3d-8796-66d6b8df6168",
-            "source": {
-              "cell": "9838f7f1-bbf5-44e7-8449-66d559e390ec",
-              "port": "c3123d8f-8511-4759-b063-ce51cab6657b"
-            },
-            "target": {
-              "cell": "899251bc-ddf3-48b0-a2cb-88801a45e97d",
-              "port": "8642c188-cb9e-4b10-aee9-86c6f7c25885"
-            },
-            "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Status / Webhook Pembayaran",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "2a17e18e-f081-485b-b860-f9507fcb029e",
-                  "title": "Tampering",
-                  "status": "Open",
-                  "severity": "High",
-                  "type": "",
-                  "description": "Status pembayaran dipalsukan atau dimodifikasi",
-                  "mitigation": "Validasi signature webhook dari Payment Gateway sebelum memproses status pembayaran\n",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 11,
-                  "score": "5/5"
-                },
-                {
-                  "id": "b5ca3c43-8513-49d2-ac8f-3b0848c2f554",
-                  "title": "Repudiation",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "",
-                  "description": "Pihak terkait menyangkal transaksi yang sudah dilakukan\n",
-                  "mitigation": "Simpan audit log transaksi dengan timestamp dan transaction ID\n",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 12,
-                  "score": "5/5"
-                }
-              ],
-              "trustBoundaryIds": [
-                "91ae1a6c-5b2b-4e14-bd00-ebe51196f5f2",
-                "6af15fb9-7496-40a6-a105-99cf5ecaadc1"
-              ],
-              "threatFrequency": {
-                "tampering": 0,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Status / Webhook Pembayaran"
-            ],
-            "id": "ee0e372f-1e1a-4181-bfc9-77f206d8b6ac",
-            "source": {
-              "cell": "676e0313-975c-4028-a2f8-fdc389697807",
-              "port": "2ad37c49-0cc0-4e73-a7d1-2c82c8a4e836"
-            },
-            "target": {
-              "cell": "9838f7f1-bbf5-44e7-8449-66d559e390ec",
-              "port": "73647116-5044-47e8-9600-f69697f2996c"
-            },
-            "vertices": [
-              {
-                "x": -1370,
-                "y": -800
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Kirim Email",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "130d0f68-5599-4dfd-bd9a-d46d931e902f",
-                  "title": "Spoofing",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "",
-                  "description": "Penyerang menyalahgunakan identitas toko untuk mengirim email palsu",
-                  "mitigation": "Gunakan SPF, DKIM, dan DMARC pada domain email",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 13,
-                  "score": "5/5"
-                }
-              ],
-              "trustBoundaryIds": [],
-              "threatFrequency": {
-                "tampering": 0,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Kirim Email"
-            ],
-            "id": "4dd6d90d-f173-437e-bc77-8bcc83dfa0c5",
-            "source": {
-              "cell": "c957dcf6-28a0-4c8e-82bd-b3d2fdcbdcd3",
-              "port": "c3123d8f-8511-4759-b063-ce51cab6657b"
-            },
-            "target": {
-              "cell": "9838f7f1-bbf5-44e7-8449-66d559e390ec",
-              "port": "73647116-5044-47e8-9600-f69697f2996c"
-            },
-            "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Serangan / Akses Tidak Sah",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "dbd90e02-5c7d-4402-8a0c-f92e3745afe3",
-                  "title": "Denial of Service",
-                  "status": "Open",
-                  "severity": "High",
-                  "type": "",
-                  "description": "Penyerang mengirim request berlebihan atau aktivitas berbahaya untuk mengganggu ketersediaan sistem",
-                  "mitigation": "Sistem harus membatasi request dari sumber yang mencurigakan, menerapkan rate limiting, serta memantau pola trafik untuk mendeteksi dan memblokir aktivitas serangan.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 15,
-                  "score": "4/5"
-                }
-              ],
-              "trustBoundaryIds": [],
-              "threatFrequency": {
-                "tampering": 0,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Serangan / Akses Tidak Sah"
-            ],
-            "id": "d5f331b2-f5fe-4a2b-bc2d-47fec6ee8866",
-            "source": {
-              "cell": "5b54975d-bcbd-4278-b6a7-03e23d0563da",
-              "port": "2303da70-5bf0-4528-a5e9-c53664436347"
-            },
-            "target": {
-              "x": -1360,
-              "y": -770
-            },
-            "vertices": [
-              {
-                "x": -1340,
-                "y": -730
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
                 "stroke": "#333333",
                 "targetMarker": {
                   "name": "block"
@@ -1058,6 +762,230 @@
                 "y": -1040
               }
             ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Status / Webhook Pembayaran",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "2a17e18e-f081-485b-b860-f9507fcb029e",
+                  "title": "Tampering",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "",
+                  "description": "Status pembayaran dipalsukan atau dimodifikasi",
+                  "mitigation": "Sistem harus memverifikasi keaslian webhook dari Payment Gateway sebelum mengubah status pembayaran atau pesanan.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 11,
+                  "score": "5/5"
+                },
+                {
+                  "id": "b5ca3c43-8513-49d2-ac8f-3b0848c2f554",
+                  "title": "Repudiation",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "",
+                  "description": "Pihak terkait menyangkal transaksi yang sudah dilakukan\n",
+                  "mitigation": "Sistem harus mencatat aktivitas transaksi dengan timestamp, identitas pengguna, dan ID transaksi sebagai audit trail.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": "5/5"
+                }
+              ],
+              "trustBoundaryIds": [
+                "91ae1a6c-5b2b-4e14-bd00-ebe51196f5f2",
+                "6af15fb9-7496-40a6-a105-99cf5ecaadc1"
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Status / Webhook Pembayaran"
+            ],
+            "id": "ee0e372f-1e1a-4181-bfc9-77f206d8b6ac",
+            "source": {
+              "cell": "676e0313-975c-4028-a2f8-fdc389697807",
+              "port": "2ad37c49-0cc0-4e73-a7d1-2c82c8a4e836"
+            },
+            "target": {
+              "cell": "9838f7f1-bbf5-44e7-8449-66d559e390ec",
+              "port": "73647116-5044-47e8-9600-f69697f2996c"
+            },
+            "vertices": [
+              {
+                "x": -1370,
+                "y": -800
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Serangan / Akses Tidak Sah",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "dbd90e02-5c7d-4402-8a0c-f92e3745afe3",
+                  "title": "Denial of Service",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "",
+                  "description": "Penyerang mengirim request berlebihan atau aktivitas berbahaya untuk mengganggu ketersediaan sistem",
+                  "mitigation": "Sistem harus menerapkan pembatasan jumlah request dan melakukan monitoring terhadap trafik yang tidak normal.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 15,
+                  "score": "4/5"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Serangan / Akses Tidak Sah"
+            ],
+            "id": "d5f331b2-f5fe-4a2b-bc2d-47fec6ee8866",
+            "source": {
+              "cell": "5b54975d-bcbd-4278-b6a7-03e23d0563da",
+              "port": "2303da70-5bf0-4528-a5e9-c53664436347"
+            },
+            "target": {
+              "x": -1360,
+              "y": -770
+            },
+            "vertices": [
+              {
+                "x": -1340,
+                "y": -730
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Kirim Email",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "130d0f68-5599-4dfd-bd9a-d46d931e902f",
+                  "title": "Spoofing",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "",
+                  "description": "Penyerang menyalahgunakan identitas toko untuk mengirim email palsu",
+                  "mitigation": "Sistem harus memastikan email berasal dari domain resmi dan menggunakan mekanisme autentikasi email untuk mencegah pemalsuan.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": "5/5"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Kirim Email"
+            ],
+            "id": "4dd6d90d-f173-437e-bc77-8bcc83dfa0c5",
+            "source": {
+              "cell": "c957dcf6-28a0-4c8e-82bd-b3d2fdcbdcd3",
+              "port": "c3123d8f-8511-4759-b063-ce51cab6657b"
+            },
+            "target": {
+              "cell": "9838f7f1-bbf5-44e7-8449-66d559e390ec",
+              "port": "73647116-5044-47e8-9600-f69697f2996c"
+            },
+            "vertices": []
           },
           {
             "position": {
@@ -1550,13 +1478,11 @@
                 "text": "D.1 MySQL DB"
               },
               "topLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -1653,7 +1579,7 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
@@ -1663,11 +1589,11 @@
                 {
                   "id": "5febdf1f-7be2-4d92-ad86-eb529e42de74",
                   "title": "Information Disclosure",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "High",
                   "type": "Information disclosure",
                   "description": "Informasi sensitif customer dapat diakses pihak yang tidak berwenang",
-                  "mitigation": "Terapkan access control, enkripsi, dan jangan menyimpan data sensitif di log",
+                  "mitigation": "Sistem harus menerapkan kontrol akses dan perlindungan terhadap data sensitif sehingga hanya pihak yang memiliki izin yang dapat mengaksesnya.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 14,
@@ -1677,7 +1603,7 @@
               "threatFrequency": {
                 "tampering": 0,
                 "repudiation": 0,
-                "informationDisclosure": 1,
+                "informationDisclosure": 3,
                 "denialOfService": 0
               }
             }
@@ -1696,8 +1622,8 @@
                 "text": "2.0\nNode.js\nREST API"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -1794,7 +1720,7 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
@@ -1803,7 +1729,7 @@
                 {
                   "id": "1f3f4df9-9389-4602-8ff4-41b356c69b24",
                   "title": "Denial of Service",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "High",
                   "type": "Denial of service",
                   "description": "API dibanjiri request sehingga layanan toko tidak dapat digunakan",
@@ -1819,7 +1745,7 @@
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 1,
+                "denialOfService": 2,
                 "elevationOfPrivilege": 0
               }
             }
@@ -2023,6 +1949,74 @@
             },
             "target": {
               "cell": "5b32667b-3f04-4592-9bea-4d4c981865fb",
+              "port": "8642c188-cb9e-4b10-aee9-86c6f7c25885"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 24,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Simpanan / Ambil Cache",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "65864b1d-b3a2-4981-a394-00a10e517901",
+                  "title": "Tampering",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "",
+                  "description": "Data cache dimanipulasi sehingga aplikasi menerima data yang salah\n",
+                  "mitigation": "Sistem harus membatasi akses ke Redis dan memvalidasi data sebelum disimpan atau digunakan dari cache.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": "5/5"
+                }
+              ],
+              "trustBoundaryIds": [
+                "40d6bd4c-5d2d-4b65-81d0-c09cee24c057"
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Simpanan / Ambil Cache"
+            ],
+            "id": "770613b3-863e-4c3d-8796-66d6b8df6168",
+            "source": {
+              "cell": "9838f7f1-bbf5-44e7-8449-66d559e390ec",
+              "port": "c3123d8f-8511-4759-b063-ce51cab6657b"
+            },
+            "target": {
+              "cell": "899251bc-ddf3-48b0-a2cb-88801a45e97d",
               "port": "8642c188-cb9e-4b10-aee9-86c6f7c25885"
             },
             "vertices": []
