@@ -1,0 +1,28 @@
+{
+  "version": "2.6.2",
+  "release_version": "2.1.24",
+  "released_at": "2026-09-23",
+  "summary": {
+    "title": "Toko Online Threat Model",
+    "owner": "Ardy",
+    "description": "Sistem toko online merupakan sistem e-commerce berbasis web yang memungkinkan pelanggan untuk melihat produk, mengelola keranjang belanja, melakukan pemesanan, dan menyelesaikan pembayaran secara online. Sistem ini terdiri dari aplikasi web untuk pelanggan, backend API, database, payment gateway, serta dashboard administratif.\n\nPelanggan mengakses sistem melalui browser atau perangkat mobile. Frontend berkomunikasi dengan backend API untuk mengambil informasi produk, mengelola akun pengguna dan keranjang belanja, membuat pesanan, serta memproses transaksi checkout. Backend menyimpan data pelanggan, produk, dan pesanan ke dalam database serta berkomunikasi dengan layanan eksternal seperti payment gateway dan layanan notifikasi.\n\nAdministrator dan staf toko menggunakan dashboard administratif untuk mengelola produk, stok, pesanan, data pelanggan, dan operasional toko lainnya. Karena sistem menangani informasi sensitif seperti data pribadi pelanggan, kredensial akun, informasi pesanan, dan data terkait pembayaran, sistem memerlukan kontrol keamanan untuk menjaga kerahasiaan, integritas, dan ketersediaan data.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "New STRIDE diagram",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.6.2",
+        "cells": []
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "Ardy",
+    "threatTop": 0
+  }
+}
